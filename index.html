@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NutriScan | Entenda seu alimento</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         CABEÇALHO
+         Menu fixo no topo (position: sticky no CSS)
+         com os links de âncora para cada seção
+         ============================================ -->
+    <header class="header">
+        <div class="logo">
+            <span>Nutri</span>Scan
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#funcionamento">Como funciona</a>
+            <a href="#semaforo">Semáforo</a>
+            <a href="#comparacao">Comparação</a>
+            <a href="#nutrientes">Nutrientes</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ============================================
+             HERO
+             Primeira seção que o usuário vê: título,
+             texto de apresentação, botão e o cartão
+             ilustrando o celular escaneando o rótulo
+             ============================================ -->
+        <section class="hero" id="inicio">
+            <div class="hero-text">
+                <span class="tag">🥗 ALIMENTAÇÃO SEM COMPLICAÇÃO</span>
+
+                <h1>
+                    Alimentação sem
+                    <span>Complicação.</span>
+                </h1>
+
+                <p>
+                    Escaneie o rótulo de um alimento e transforme
+                    informações nutricionais complicadas em dados
+                    simples, coloridos e fáceis de entender.
+                </p>
+
+                <button class="primary-button">
+                    📷 Escanear alimento
+                </button>
+            </div>
+
+            <!-- cartão decorativo simulando a leitura do rótulo -->
+            <div class="scanner-card">
+                <div class="scanner-circle">
+                    📱
+                </div>
+
+                <h2>Leia seu rótulo</h2>
+
+                <p>
+                    Aponte a câmera para a tabela nutricional
+                    ou código de barras.
+                </p>
+
+                <div class="scanner-decoration">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             COMO FUNCIONA
+             Três passos explicando o fluxo de uso
+             do site: escanear, identificar e interpretar
+             ============================================ -->
+        <section class="section funcionamento" id="funcionamento">
+
+            <div class="section-title">
+                <span>COMO FUNCIONA</span>
+
+                <h2>
+                    Da câmera para uma informação fácil
+                </h2>
+
+                <p>
+                    O NutriScan transforma os números do rótulo
+                    em informações visuais e educativas.
+                </p>
+            </div>
+
+            <div class="steps">
+
+                <!-- passo 1: escanear o rótulo -->
+                <div class="step-card pink">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">📷</div>
+                    <h3>Escaneie</h3>
+                    <p>
+                        Use a câmera para escanear a tabela
+                        nutricional ou o código de barras.
+                    </p>
+                </div>
+
+                <!-- passo 2: sistema identifica os dados -->
+                <div class="step-card blue">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🔎</div>
+                    <h3>Identifique</h3>
+                    <p>
+                        O sistema identifica as informações
+                        nutricionais presentes no alimento.
+                    </p>
+                </div>
+
+                <!-- passo 3: resultado apresentado pelo semáforo -->
+                <div class="step-card yellow">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">🚦</div>
+                    <h3>Interprete</h3>
+                    <p>
+                        As informações são apresentadas de
+                        maneira simples através do semáforo.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             SEMÁFORO NUTRICIONAL
+             Explica o significado de cada cor (baixo,
+             moderado, alto) e, logo abaixo, as regras/
+             faixas usadas para definir cada cor
+             ============================================ -->
+        <section class="traffic-section" id="semaforo">
+            <div class="section-title">
+                <span>SEMÁFORO NUTRICIONAL</span>
+
+                <h2>
+                    Entenda os principais componentes
+                </h2>
+
+                <p>
+                    O semáforo organiza as informações nutricionais
+                    em cores para facilitar a compreensão.
+                </p>
+            </div>
+
+            <!-- as 3 cores do semáforo, com sua explicação -->
+            <div class="traffic-explanation">
+
+                <div class="traffic-box low">
+                    <div class="traffic-light">
+                        🟢
+                    </div>
+                    <h3>BAIXO</h3>
+                    <p>
+                        Menor quantidade do componente
+                        analisado.
+                    </p>
+                </div>
+
+                <div class="traffic-box medium">
+                    <div class="traffic-light">
+                        🟡
+                    </div>
+                    <h3>MODERADO</h3>
+                    <p>
+                        Quantidade intermediária
+                        do componente.
+                    </p>
+                </div>
+
+                <div class="traffic-box high">
+                    <div class="traffic-light">
+                        🔴
+                    </div>
+                    <h3>ALTO</h3>
+                    <p>
+                        Maior quantidade do componente
+                        analisado.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- regras/faixas usadas para calcular a cor do semáforo,
+                 baseadas nos critérios de "alto em" da ANVISA (RDC 429/2020) -->
+            <div class="rules-container">
+                <h3>Como o NutriScan define as cores</h3>
+
+                <p class="rules-subtitle">
+                    As faixas abaixo são uma adaptação educativa dos critérios
+                    de "alto em" da ANVISA (RDC nº 429/2020) para açúcares
+                    adicionados, gordura saturada e sódio, sempre por 100 g
+                    do alimento.
+                </p>
+
+                <div class="rules-grid">
+
+                    <!-- regra do açúcar -->
+                    <div class="rule-card sugar">
+                        <div class="rule-icon">🍬</div>
+                        <h4>Açúcares adicionados</h4>
+
+                        <div class="range low-range">
+                            <strong>🟢 Baixo</strong>
+                            <span>abaixo de 5 g</span>
+                        </div>
+
+                        <div class="range medium-range">
+                            <strong>🟡 Moderado</strong>
+                            <span>de 5 g a 14,9 g</span>
+                        </div>
+
+                        <div class="range high-range">
+                            <strong>🔴 Alto</strong>
+                            <span>15 g ou mais</span>
+                        </div>
+                    </div>
+
+                    <!-- regra da gordura saturada -->
+                    <div class="rule-card saturated">
+                        <div class="rule-icon">🧈</div>
+                        <h4>Gordura saturada</h4>
+
+                        <div class="range low-range">
+                            <strong>🟢 Baixo</strong>
+                            <span>abaixo de 2 g</span>
+                        </div>
+
+                        <div class="range medium-range">
+                            <strong>🟡 Moderado</strong>
+                            <span>de 2 g a 5,9 g</span>
+                        </div>
+
+                        <div class="range high-range">
+                            <strong>🔴 Alto</strong>
+                            <span>6 g ou mais</span>
+                        </div>
+                    </div>
+
+                    <!-- regra do sódio -->
+                    <div class="rule-card sodium">
+                        <div class="rule-icon">🧂</div>
+                        <h4>Sódio</h4>
+
+                        <div class="range low-range">
+                            <strong>🟢 Baixo</strong>
+                            <span>abaixo de 200 mg</span>
+                        </div>
+
+                        <div class="range medium-range">
+                            <strong>🟡 Moderado</strong>
+                            <span>de 200 mg a 599 mg</span>
+                        </div>
+
+                        <div class="range high-range">
+                            <strong>🔴 Alto</strong>
+                            <span>600 mg ou mais</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             COMPARAÇÃO ENTRE ALIMENTOS
+             Demonstração da funcionalidade de comparar
+             dois produtos parecidos lado a lado
+             ============================================ -->
+        <section class="compare-section" id="comparacao">
+            <div class="section-title">
+                <span>COMPARE ANTES DE ESCOLHER</span>
+
+                <h2>
+                    Dois produtos, uma decisão mais fácil
+                </h2>
+
+                <p>
+                    Escaneie dois alimentos parecidos e veja lado a lado
+                    qual tem menos calorias, açúcar, sódio e gordura.
+                </p>
+            </div>
+
+            <div class="compare-grid">
+
+                <!-- produto A: exemplo de opção mais equilibrada -->
+                <div class="compare-card">
+                    <span class="badge">PRODUTO A</span>
+                    <h4>🥣 Cereal integral</h4>
+
+                    <div class="compare-row">
+                        <span>Calorias</span>
+                        <strong>120 kcal</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Açúcares</span>
+                        <strong>4 g 🟢</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Sódio</span>
+                        <strong>90 mg 🟢</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Gordura saturada</span>
+                        <strong>0,5 g 🟢</strong>
+                    </div>
+                </div>
+
+                <!-- ícone "VS" entre os dois cards -->
+                <div class="compare-vs">VS</div>
+
+                <!-- produto B: exemplo de opção menos equilibrada -->
+                <div class="compare-card alt">
+                    <span class="badge">PRODUTO B</span>
+                    <h4>🥣 Cereal açucarado</h4>
+
+                    <div class="compare-row">
+                        <span>Calorias</span>
+                        <strong>180 kcal</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Açúcares</span>
+                        <strong>22 g 🔴</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Sódio</span>
+                        <strong>310 mg 🟡</strong>
+                    </div>
+
+                    <div class="compare-row">
+                        <span>Gordura saturada</span>
+                        <strong>3 g 🟡</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- resultado da comparação entre os dois produtos -->
+            <div class="compare-winner">
+                ✅ O Produto A é a escolha mais equilibrada: menos açúcar,
+                menos sódio e menos gordura saturada por porção.
+            </div>
+
+        </section>
+
+
+        <!-- ============================================
+             COMPARAÇÕES DO COTIDIANO
+             Traduz os valores nutricionais para
+             exemplos visuais fáceis de entender
+             ============================================ -->
+        <section class="result-section">
+            <div class="result-content">
+                <span>NA PRÁTICA</span>
+
+                <h2>
+                    Números viram exemplos do dia a dia
+                </h2>
+
+                <p>
+                    Em vez de gramas e miligramas, o NutriScan traduz o
+                    rótulo para comparações fáceis de visualizar.
+                </p>
+
+                <div class="result-example">
+
+                    <div class="result-item">
+                        <span class="result-icon">🍞</span>
+                        <span>Calorias equivalentes a</span>
+                        <strong>8 fatias de pão</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-icon">🥄</span>
+                        <span>Açúcar equivalente a</span>
+                        <strong>6 colheres de chá</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-icon">🧂</span>
+                        <span>Sal equivalente a</span>
+                        <strong>2 pacotes de salgadinho</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span class="result-icon">🧈</span>
+                        <span>Gordura equivalente a</span>
+                        <strong>3 colheres de manteiga</strong>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ============================================
+             NUTRIENTES
+             Explica de forma simples a função de cada
+             grupo de nutrientes no organismo
+             ============================================ -->
+        <section class="section nutrients-section" id="nutrientes">
+            <div class="section-title">
+                <span>ENTENDA MELHOR</span>
+
+                <h2>
+                    Cada informação tem uma função
+                </h2>
+
+                <p>
+                    Conheça de forma simples o papel de cada
+                    componente no organismo.
+                </p>
+            </div>
+
+            <div class="nutrient-grid">
+
+                <div class="nutrient-card green-card">
+                    <div class="card-icon">🍞</div>
+                    <h3>Carboidratos</h3>
+                    <p>
+                        São uma fonte importante de energia
+                        para o organismo.
+                    </p>
+                </div>
+
+                <div class="nutrient-card pink-card">
+                    <div class="card-icon">🥚</div>
+                    <h3>Proteínas</h3>
+                    <p>
+                        Participam da construção e reparação
+                        dos tecidos.
+                    </p>
+                </div>
+
+                <div class="nutrient-card blue-card">
+                    <div class="card-icon">🥑</div>
+                    <h3>Gorduras</h3>
+                    <p>
+                        Ajudam no isolamento do corpo e
+                        na proteção dos órgãos.
+                    </p>
+                </div>
+
+                <div class="nutrient-card purple-card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Vitaminas e minerais</h3>
+                    <p>
+                        Regulam diferentes funções importantes
+                        do organismo.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================================
+         RODAPÉ
+         ============================================ -->
+    <footer>
+        <div class="footer-logo">
+            Nutri<span>Scan</span>
+        </div>
+
+        <p>
+            Informação nutricional de forma simples,
+            visual e educativa.
+        </p>
+
+        <small>
+            Projeto acadêmico — TAI
+        </small>
+    </footer>
+
+</body>
+
+</html>
